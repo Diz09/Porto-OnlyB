@@ -122,18 +122,9 @@
             </div> <!-- /.col- -->
           </div> <!-- /.row -->
         </div> <!-- /.container -->
-
-        <nav class="page-nav clear">
-          <div class="container">
-            <div class="flex flex-middle space-between">
-              <span class="prev-page"><a href="{{ route('testimonial') }}" class="link">&larr; Prev Page</a></span>
-              <span class="copyright">Copyright &copy; 2021, Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a>.</span>
-            </div>
-          </div>
-          <!-- /.page-nav -->
-        </nav>
         
-        <!-- /.container -->
+      {{-- 🧩 Include nav dengan parameter --}}
+      @include('partials.page-nav', ['prev' => 'testimonial'])
 
       </div> <!-- /.pt-tablecell -->
     </div> <!-- /.pt-table -->
