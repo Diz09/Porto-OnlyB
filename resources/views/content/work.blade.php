@@ -1,4 +1,5 @@
 @extends('index')
+@section('title', 'Works')
 @section('content')
   <div class="pt-table">
     <div class="pt-tablecell page-works relative">

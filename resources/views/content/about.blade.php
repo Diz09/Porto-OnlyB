@@ -1,4 +1,5 @@
 @extends('index')
+@section('title', 'About Me')
 @section('content')
   <div class="pt-table">
     <div class="pt-tablecell page-about relative">

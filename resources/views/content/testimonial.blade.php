@@ -1,4 +1,5 @@
 @extends('index')
+@section('title', 'Testimonials')
 @section('content')
   <div class="pt-table">
     <div class="pt-tablecell page-quotes relative">
