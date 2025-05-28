@@ -12,7 +12,7 @@
         <div class="col-xs-12 col-md-6 col-lg-7">
           <div class="page-title">
             <h2>
-              {{ $name }} 
+              {{ $name }} <br>
               <span class="primary">{{ $highlight}}</span> 
               <span class="title-bg">{{ $sectionTitle }}</span></h2>
             <p>{{ $description1 }}</p>

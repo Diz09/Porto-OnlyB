@@ -13,8 +13,8 @@ class WelcomeController extends Controller
             'name' => 'Dimas',
             'highlight' => 'Izzulhaq Zain',
             'sectionTitle' => 'About',
-            'description1' => 'A product designer from England...',
-            'description2' => 'Lorem ipsum dolor sit amet...',
+            'description1' => 'Seorang Mahasiswa TI dari Politeknik Negeri Jember, berfokus pada pengembangan website terutama dari sisi server',
+            'description2' => '',
         ]);
     }
 }
