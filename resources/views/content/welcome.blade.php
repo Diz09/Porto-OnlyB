@@ -4,16 +4,19 @@
   <div class="pt-tablecell page-welcome relative">
 
     <div class="author-image-large">
-      <img src="{{ asset('images/author.png') }}" alt="">
+      <img src="{{ asset('images/' . $authorImage) }}" alt="">
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-7">
           <div class="page-title">
-            <h2>David <span class="primary">ramon</span> <span class="title-bg">About</span></h2>
-            <p>A product designer from England, who focuses on interactive design & A freelance designer focusing on typography & clean interfaces. Also works in dignissimos non quos Google..</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repellendus corporis, tenetur inventore perferendis reprehenderit autem dignissimos non quos unde eveniet sapiente necessitatibus consequuntur ea ab dolore.</p>
+            <h2>
+              {{ $name }} 
+              <span class="primary">{{ $highlight}}</span> 
+              <span class="title-bg">{{ $sectionTitle }}</span></h2>
+            <p>{{ $description1 }}</p>
+            <p>{{ $description2 }}</p>
           </div>
         </div>
       </div> <!-- /.row -->
