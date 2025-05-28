@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel
+  template:
+    metadata:
+      labels:
+        app: laravel
+    spec:
+      containers:
+      - name: laravel
+        image: laravel-app:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: laravel-code
+          mountPath: /var/www/html
+      volumes:
+      - name: laravel-code
+        hostPath:
+          path: /var/www/apsensi-web
+          type: Directory
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-service
+spec:
+  type: NodePort
+  selector:
+    app: laravel
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30080
+
