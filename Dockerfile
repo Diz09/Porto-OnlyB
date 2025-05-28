@@ -1,50 +1,38 @@
-FROM php:8.3-fpm
+FROM php:8.3.20-apache
 
-# Set working directory
-WORKDIR /var/www/html
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt update && apt install -y \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
     libzip-dev \
     libonig-dev \
-    nginx \
-    sqlite3 \
     curl \
-    unzip \
     zip \
-    git \
+    unzip \
     && pecl install redis \
     && docker-php-ext-enable redis \
     && rm -rf /var/lib/apt/lists/*
 
-# Install PHP extensions
+COPY .docker/apache/default.conf /etc/apache2/sites-available/000-default.conf
+
+RUN echo "upload_max_filesize=50M" > /usr/local/etc/php/conf.d/uploads.ini \
+ && echo "post_max_size=100M" >> /usr/local/etc/php/conf.d/uploads.ini
+ 
+RUN echo "<Directory /var/www/html>" > /etc/apache2/conf-available/upload-limit.conf \
+ && echo "    LimitRequestBody 104857600" >> /etc/apache2/conf-available/upload-limit.conf \
+ && echo "</Directory>" >> /etc/apache2/conf-available/upload-limit.conf \
+ && a2enconf upload-limit
+
+RUN a2enmod rewrite
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql zip mbstring
+    && docker-php-ext-install -j$(nproc) gd pdo pdo_mysql
 
-# Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Copy Laravel application
-COPY . /var/www/html
+WORKDIR /var/www/html
+COPY . .
 
-# Set permissions
-RUN mkdir -p database \
-    && touch database/database.sqlite \
-    && chown -R www-data:www-data /var/www/html \
-    && chmod -R 777 storage bootstrap/cache database
-
-# Configure Nginx
-COPY ./nginx/nginx.conf /etc/nginx/sites-available/default
-RUN ln -sf /dev/stdout /var/log/nginx/access.log \
-    && ln -sf /dev/stderr /var/log/nginx/error.log
-
-# Copy entrypoint
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 80
-
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["sh", ".docker/entrypoint.sh"]
