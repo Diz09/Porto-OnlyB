@@ -19,7 +19,10 @@ class AboutController extends Controller
                 'languages' => 'Indonesia, English',
                 'expertise' => 'Backend Web-Developmen',
                 'freelance' => 'Available',
-                'bio' => 'I am a student who is passionate about continuing to develop myself.'
+                'bio' => 'I am a student who is passionate about continuing to develop myself.',
+                'campus' => 'Politeknik Negeri Jember',
+                'dsp' => 'Information Technology',
+                'generation' => 'I am a student who is passionate about continuing to develop myself.',
             ],
             'skills' => [
                 ['name' => 'Backend Web', 'level' => '88%'],

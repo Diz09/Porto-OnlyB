@@ -23,17 +23,19 @@
                 <img src="{{ asset('images/' . $author['image']) }}" alt="">
               </figure> <!-- /.author-bio -->
               <div class="author-desc">
-                <p><b>Date of birth:</b>{{ $author['dob'] }}</p>
-                <p><b>Language:</b>{{ $author['languages'] }}</p>
-                <p><b>Expert in:</b>{{ $author['expertise'] }}</p>
-                {{-- <p><b>Freelance:</b>{{ $author['freelance'] }}</p> --}}
+                <p><b>Date of birth:</b> {{ $author['dob'] }}</p>
+                <p><b>Language:</b> {{ $author['languages'] }}</p>
+                <p><b>Expert in:</b> {{ $author['expertise'] }}</p>
+                <p><b>Campus:</b> {{ $author['campus'] }}</p>
+                <p><b>Department:</b> {{ $author['dsp'] }}</p>
+                <p><b>generation:</b> {{ $author['generation'] }}</p>
               </div>
               <!-- /.author-desc -->
             </div> <!-- /.about-author -->
             <p>{{ $author['bio'] }}</p>
           </div> <!-- /.col -->
 
-          <div class="col-xs-12 col-md-6">
+          <div class="col-xs-20 col-md-6">
             <div class="section-title clear">
               <h3>Skills</h3>
             </div>

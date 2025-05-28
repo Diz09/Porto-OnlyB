@@ -8,70 +8,40 @@
           <div class="row">
             <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
               <div class="page-title text-center">
-                <h2>Get in <span class="primary">touch</span> <span class="title-bg">Contact</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                  laoreet dolore magna aliquam erat volutpat.</p>
+                <h2>
+                  {{ $title }} 
+                  <span class="primary">{{ $highlight }}</span> 
+                  <span class="title-bg">{{ $background }}</span></h2>
+                <p>{{ $description }}</p>
               </div>
             </div>
           </div> <!-- /.row -->
 
           <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-              <div class="contact-block">
-                <div class="media">
-                  <div class="media-left">
-                    <i class="tf-envelope2"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Email</h4>
-                    <p><a href="mailto:my_name@gmail.com">my_name@gmail.com</a></p>
-                  </div>
-                </div>
-              </div>
-              <!-- /.contact-block -->
-              <div class="contact-block">
-                <div class="media">
-                  <div class="media-left">
-                    <i class="tf-phone2"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Phone</h4>
-                    <p><a href="tel:+000-1111-2222">+000-1111-2222</a></p>
+              @foreach ($contacts as $contact)
+                <div class="contact-block">
+                  <div class="media">
+                    <div class="media-left">
+                      <i class="{{ $contact['icon'] }}"></i>
+                    </div>
+                    <div class="media-body">
+                      <h4>{{ $contact['label'] }}</h4>
+                      <p><a href="{{ $contact['href'] }}">{{ $contact['text'] }}</a></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- /.contact-block -->
-              <div class="contact-block">
-                <div class="media">
-                  <div class="media-left">
-                    <i class="tf-mobile"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Skype</h4>
-                    <p><a href="skype:my_name">my_name</a></p>
-                  </div>
-                </div>
-              </div>
-              <!-- /.contact-block -->
+              @endforeach
 
               <ul class="contact-social">
-                <li>
-                  <span class="contact-social-hex"></span>
-                  <a href="www.fb.com/themefisher"><i class="tf-ion-social-facebook"></i></a>
-                </li>
-                <li>
-                  <span class="contact-social-hex"></span>
-                  <a href="www.twitter.com/themefisher"><i class="tf-ion-social-twitter"></i></a>
-                </li>
-                <li>
-                  <span class="contact-social-hex"></span>
-                  <a href="#"><i class="tf-ion-social-google"></i></a>
-                </li>
-                <li>
-                  <span class="contact-social-hex"></span>
-                  <a href="www.dribbble.com/themefisher"><i class="tf-ion-social-dribbble"></i></a>
-                </li>
+                @foreach ($socials as $social)
+                  <li>
+                    <span class="contact-social-hex"></span>
+                    <a href="{{ $social['url'] }}"><i class="{{ $social['icon'] }}"></i></a>
+                  </li>
+                @endforeach
               </ul>
+
             </div>
             <div class="col-xs-12 col-sm-7 col-md-7 col-md-offset-1 col-lg-offset-2">
               <div class="section-title clear">

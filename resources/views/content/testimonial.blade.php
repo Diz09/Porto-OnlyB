@@ -8,9 +8,12 @@
         <div class="row">
           <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
             <div class="page-title text-center">
-              <h2>My <span class="primary">clients</span><span class="title-bg">Speech</span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat.</p>
+              <h2>
+                {{ $title }} 
+                <span class="primary">{{ $highlight }}</span>
+                <span class="title-bg">{{ $background }}</span>
+              </h2>
+              <p>{{ $description }}</p>
             </div>
           </div>
         </div> <!-- /.row -->
@@ -18,102 +21,23 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="testimonials">
-              <div class="item">
-                <figure class="thumb">
-                  <div class="tm-hex" style="background-image: url('images/tm.jpg');">
-                    <div class="hexTop"></div>
-                    <div class="hexBottom"></div>
+              @foreach ($testimonials as $item)
+                <div class="item">
+                  <figure class="thumb">
+                    <div class="tm-hex" style="background-image: url('{{ asset('images/' . $item['image']) }}');">
+                      <div class="hexTop"></div>
+                      <div class="hexBottom"></div>
+                    </div>
+                    <figcaption>
+                      <h4>{{ $item['name'] }}</h4>
+                      <span>{{ $item['position'] }}</span>
+                    </figcaption>
+                  </figure>
+                  <div class="text">
+                    <p>{{ $item['quote'] }}</p>
                   </div>
-                  <figcaption>
-                    <h4>Adam Drigan</h4>
-                    <span>CEO, Ultra Solution</span>
-                  </figcaption>
-                </figure>
-                <div class="text">
-                  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
-                    formas humanitatis per seacula quarta decima. </p>
                 </div>
-              </div>
-              <div class="item">
-                <figure class="thumb">
-                  <div class="tm-hex" style="background-image: url('images/tm-2.jpg');">
-                    <div class="hexTop"></div>
-                    <div class="hexBottom"></div>
-                  </div>
-                  <figcaption>
-                    <h4>Adam Drigan</h4>
-                    <span>CEO, Ultra Solution</span>
-                  </figcaption>
-                </figure>
-                <div class="text">
-                  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
-                    formas humanitatis per seacula quarta decima. </p>
-                </div>
-              </div>
-              <div class="item">
-                <figure class="thumb">
-                  <div class="tm-hex" style="background-image: url('images/tm.jpg');">
-                    <div class="hexTop"></div>
-                    <div class="hexBottom"></div>
-                  </div>
-                  <figcaption>
-                    <h4>Adam Drigan</h4>
-                    <span>CEO, Ultra Solution</span>
-                  </figcaption>
-                </figure>
-                <div class="text">
-                  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
-                    formas humanitatis per seacula quarta decima. </p>
-                </div>
-              </div>
-              <div class="item">
-                <figure class="thumb">
-                  <div class="tm-hex" style="background-image: url('images/tm-2.jpg');">
-                    <div class="hexTop"></div>
-                    <div class="hexBottom"></div>
-                  </div>
-                  <figcaption>
-                    <h4>Adam Drigan</h4>
-                    <span>CEO, Ultra Solution</span>
-                  </figcaption>
-                </figure>
-                <div class="text">
-                  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
-                    formas humanitatis per seacula quarta decima. </p>
-                </div>
-              </div>
-              <div class="item">
-                <figure class="thumb">
-                  <div class="tm-hex" style="background-image: url('images/tm.jpg');">
-                    <div class="hexTop"></div>
-                    <div class="hexBottom"></div>
-                  </div>
-                  <figcaption>
-                    <h4>Adam Drigan</h4>
-                    <span>CEO, Ultra Solution</span>
-                  </figcaption>
-                </figure>
-                <div class="text">
-                  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
-                    formas humanitatis per seacula quarta decima. </p>
-                </div>
-              </div>
-              <div class="item">
-                <figure class="thumb">
-                  <div class="tm-hex" style="background-image: url('images/tm-2.jpg');">
-                    <div class="hexTop"></div>
-                    <div class="hexBottom"></div>
-                  </div>
-                  <figcaption>
-                    <h4>Adam Drigan</h4>
-                    <span>CEO, Ultra Solution</span>
-                  </figcaption>
-                </figure>
-                <div class="text">
-                  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
-                    formas humanitatis per seacula quarta decima. </p>
-                </div>
-              </div>
+                @endforeach
             </div>
           </div>
         </div> <!-- /.row -->
