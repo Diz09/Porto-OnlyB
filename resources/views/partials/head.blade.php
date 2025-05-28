@@ -23,6 +23,7 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/extra.css') }}">
   
   <!-- Theme Stylesheet -->
   <link rel="stylesheet" href="#" id="color-changer">

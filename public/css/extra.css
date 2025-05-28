@@ -1,0 +1,11 @@
+.hx {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+}
+
+.s-hx {
+  width: 250px;
+  margin: 0px;
+}
