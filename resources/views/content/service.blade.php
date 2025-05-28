@@ -2,7 +2,7 @@
 @section('content')
   <div class="pt-table">
     <div class="pt-tablecell page-services relative">
-      <a href="{{ route('home') }}" class="page-close"><i class="tf-ion-close"></i></a>
+      
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-lg-offset-1 col-lg-10">

@@ -2,9 +2,6 @@
 @section('content')
   <div class="pt-table">
     <div class="pt-tablecell page-about relative">
-      <!-- .close -->
-      <a href="{{ route('home') }}" class="page-close"><i class="tf-ion-close"></i></a>
-      <!-- /.close -->
 
       <div class="container">
         <div class="row">

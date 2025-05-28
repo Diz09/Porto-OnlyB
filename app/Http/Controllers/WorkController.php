@@ -8,6 +8,6 @@ class WorkController extends Controller
 {
     public function show() 
     {
-        return view('all-body.work');
+        return view('content.work');
     }
 }

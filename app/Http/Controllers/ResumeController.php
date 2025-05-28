@@ -8,6 +8,6 @@ class ResumeController extends Controller
 {
     public function show() 
     {
-        return view('all-body.resume');
+        return view('content.resume');
     }
 }

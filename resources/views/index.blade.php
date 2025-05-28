@@ -83,9 +83,15 @@ FACEBOOK: https://www.facebook.com/themefisher
   </div>
 
 <main class="site-wrapper">
+  @if (!Request::routeIs('home'))
+    @include('partials.page-top')
+  @endif
+
   @yield('hexagon')
   
-  @yield('content')
+  <main class="site-wrapper" style="padding-top: {{ Request::routeIs('home') ? '0' : '70px' }};">
+    @yield('content')
+  </main>
 </main> <!-- /.site-wrapper -->
 
 
