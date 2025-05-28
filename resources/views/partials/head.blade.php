@@ -1,7 +1,7 @@
 <head>
   <!-- ** Basic Page Needs ** -->
   <meta charset="utf-8">
-  <title>Phantom - Bootstrap Portfolio Template</title>
+  <title>Portofolio - Dimas Izzulhaq Zain</title>
 
   <!-- ** Mobile Specific Metas ** -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
