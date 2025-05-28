@@ -13,7 +13,7 @@ class WelcomeController extends Controller
             'name' => 'Dimas',
             'highlight' => 'Izzulhaq Zain',
             'sectionTitle' => 'About',
-            'description1' => 'Seorang Mahasiswa TI dari Politeknik Negeri Jember, berfokus pada pengembangan website terutama dari sisi server',
+            'description1' => 'An IT student from Jember State Polytechnic, focusing on website development, especially from the server side.',
             'description2' => '',
         ]);
     }
