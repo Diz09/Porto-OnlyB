@@ -7,27 +7,29 @@
         <div class="row">
           <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
             <div class="page-title text-center">
-              <h2>About <span class="primary">me</span> <span class="title-bg">Name</span></h2>
-              <p>I am working as a professional UI/UX Designer since 2007. Worked in more than 200 live projects and
-                also with more than 120 different clients!</p>
+              <h2>
+                {{ $title }} 
+                <span class="primary">{{ $subtitle }}</span> 
+                <span class="title-bg">{{ $sectionLabel }}</span>
+              </h2>
+              <p>{{ $description }}</p>
             </div>
           </div>
 
           <div class="col-xs-12 col-md-6">
             <div class="about-author">
               <figure class="author-thumb">
-                <img src="images/author.jpg" alt="">
+                <img src="{{ asset('images/' . $author['image']) }}" alt="">
               </figure> <!-- /.author-bio -->
               <div class="author-desc">
-                <p><b>Date of birth:</b> 29th july, 1984</p>
-                <p><b>Language:</b> English, Spanish</p>
-                <p><b>Expert in:</b> UI/UX, Web development</p>
-                <p><b>Freelance:</b> Available</p>
+                <p><b>Date of birth:</b>{{ $author['dob'] }}</p>
+                <p><b>Language:</b>{{ $author['languages'] }}</p>
+                <p><b>Expert in:</b>{{ $author['expertise'] }}</p>
+                {{-- <p><b>Freelance:</b>{{ $author['freelance'] }}</p> --}}
               </div>
               <!-- /.author-desc -->
             </div> <!-- /.about-author -->
-            <p>I'm a multi-award winning designer that has been specialising in web design for the past three years
-              although I have experience in branding and print.Projects.</p>
+            <p>{{ $author['bio'] }}</p>
           </div> <!-- /.col -->
 
           <div class="col-xs-12 col-md-6">
@@ -35,48 +37,15 @@
               <h3>Skills</h3>
             </div>
             <div class="skill-wrapper">
+              @foreach($skills as $skill)
               <div class="progress clear">
-                <div class="skill-name">Photoshop</div>
+                <div class="skill-name">{{ $skill['name'] }}</div>
                 <div class="skill-bar">
                   <div class="bar"></div>
                 </div>
-                <div class="skill-lavel" data-skill-value="90%"></div>
+                <div class="skill-lavel" data-skill-value="{{ $skill['level'] }}"></div>
               </div> <!-- /.progress -->
-              <div class="progress clear">
-                <div class="skill-name">Illustrator</div>
-                <div class="skill-bar">
-                  <div class="bar"></div>
-                </div>
-                <div class="skill-lavel" data-skill-value="78%"></div>
-              </div> <!-- /.progress -->
-              <div class="progress clear">
-                <div class="skill-name">After Fffects</div>
-                <div class="skill-bar">
-                  <div class="bar"></div>
-                </div>
-                <div class="skill-lavel" data-skill-value="85%"></div>
-              </div> <!-- /.progress -->
-              <div class="progress clear">
-                <div class="skill-name">HTML5</div>
-                <div class="skill-bar">
-                  <div class="bar"></div>
-                </div>
-                <div class="skill-lavel" data-skill-value="95%"></div>
-              </div> <!-- /.progress -->
-              <div class="progress clear">
-                <div class="skill-name">WordPress</div>
-                <div class="skill-bar">
-                  <div class="bar"></div>
-                </div>
-                <div class="skill-lavel" data-skill-value="70%"></div>
-              </div> <!-- /.progress -->
-              <div class="progress clear">
-                <div class="skill-name">jQuery</div>
-                <div class="skill-bar">
-                  <div class="bar"></div>
-                </div>
-                <div class="skill-lavel" data-skill-value="75%"></div>
-              </div> <!-- /.progress -->
+              @endforeach
             </div> <!-- /.skill-wrapper -->
           </div> <!-- /.col -->
         </div> <!-- /.row -->
