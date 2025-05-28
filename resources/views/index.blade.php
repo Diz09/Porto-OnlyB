@@ -39,20 +39,20 @@ FACEBOOK: https://www.facebook.com/themefisher
 
   <!-- Essential Stylesheets -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800">
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="plugins/animate.css">
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-  <link rel="stylesheet" href="plugins/themefisher-fonts/css/themefisher-fonts.min.css">  
+  <link rel="stylesheet" href="{{ asset('plugins/bootstrap/bootstrap.min.css')}} ">
+  <link rel="stylesheet" href="{{ asset('plugins/animate.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/slick/slick.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/slick/slick-theme.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/themefisher-fonts/css/themefisher-fonts.min.css') }}">  
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   
   <!-- Theme Stylesheet -->
   <link rel="stylesheet" href="#" id="color-changer">
   
   <!--Favicon-->
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
 
 </head>
 <body><!-- set class="dark" on body tag for DARK-THEME -->
@@ -83,211 +83,23 @@ FACEBOOK: https://www.facebook.com/themefisher
   </div>
 
 <main class="site-wrapper">
-  <div class="pt-table">
-    <div class="pt-tablecell page-home relative" style="background-image: url('images/banner.jpg');">
-      <div class="overlay"></div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-            <div class="page-title home text-center">
-              <img src="images/phantom.png" alt="">
-              <p>A product designer from England, who focuses on interactive design &amp; A freelance designer focusing on typography &amp; clean interfaces. Also works in Google.</p>
-            </div>
-
-            <div class="hexagon-menu clear">
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="{{ route('welcome') }}" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <i class="tf-dial"></i>
-                    </span>
-                    <span class="title">Welcome</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
-                      fill="#1e2530"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="{{ route('about') }}" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <i class="tf-profile-male"></i>
-                    </span>
-                    <span class="title">About</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="{{ route('service') }}" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <i class="tf-tools-2"></i>
-                    </span>
-                    <span class="title">Services</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="{{ route('resume') }}" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <i class="tf-tools"></i>
-                    </span>
-                    <span class="title">Resume</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="{{ route('work') }}" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <i class="tf-briefcase2"></i>
-                    </span>
-                    <span class="title">Works</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="{{ route('testimonial') }}" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <i class="tf-chat"></i>
-                    </span>
-                    <span class="title">Testimonials</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="{{ route('contact') }}" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <i class="tf-envelope2"></i>
-                    </span>
-                    <span class="title">Contact</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                  </svg>
-                </a>
-              </div>
-            </div> <!-- /.hexagon-menu -->
-
-          </div> <!-- /.col-xs-12 -->
-
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
-
-    </div> <!-- /.pt-tablecell -->
-  </div> <!-- /.pt-table -->
+  @yield('hexagon')
+  
+  @yield('content')
 </main> <!-- /.site-wrapper -->
+
 
 
 <!-- 
 Essential Scripts
 =====================================-->
-<script src="plugins/jquery-2.2.4.min.js"></script>
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="plugins/jquery.nicescroll.min.js"></script>
-<script src="plugins/isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/slick/slick.min.js"></script>
+<script src="{{ asset('plugins/jquery-2.2.4.min.js') }}"></script>
+<script src="{{ asset('plugins/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ asset('plugins/jquery.nicescroll.min.js') }}"></script>
+<script src="{{ asset('plugins/isotope/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('plugins/slick/slick.min.js')}} "></script>
 
-<script src="js/script.js"></script>
+<script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 </html>

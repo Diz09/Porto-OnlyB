@@ -8,6 +8,6 @@ class ContactController extends Controller
 {
     public function show() 
     {
-        return view('element.contact');
+        return view('all-body.contact');
     }
 }

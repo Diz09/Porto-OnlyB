@@ -8,6 +8,6 @@ class WelcomeController extends Controller
 {
     public function show() 
     {
-        return view('element.welcome');
+        return view('all-body.welcome');
     }
 }

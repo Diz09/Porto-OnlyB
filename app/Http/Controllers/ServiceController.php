@@ -8,6 +8,6 @@ class ServiceController extends Controller
 {
     public function show() 
     {
-        return view('element.service');
+        return view('all-body.service');
     }
 }

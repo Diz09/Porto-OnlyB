@@ -8,6 +8,6 @@ class TestimonialController extends Controller
 {
     public function show() 
     {
-        return view('element.testimonial');
+        return view('all-body.testimonial');
     }
 }
