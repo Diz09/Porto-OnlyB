@@ -146,12 +146,12 @@
                   <div></div>
                   <div></div>
                 </div>
-                <a href="{{ route('testimonial') }}" class="hex-content">
+                <a href="{{ route('achievement') }}" class="hex-content">
                   <span class="hex-content-inner">
                     <span class="icon">
                       <i class="tf-chat"></i>
                     </span>
-                    <span class="title">Testimonials</span>
+                    <span class="title">Achievements</span>
                   </span>
                   <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                     xmlns="http://www.w3.org/2000/svg">

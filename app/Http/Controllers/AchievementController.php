@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TestimonialController extends Controller
+class AchievementController extends Controller
 {
     public function show() 
     {
-        return view('content.testimonial',
+        return view('content.achievement',
         [
             'title' => 'My',
             'highlight' => 'Clients',
             'background' => 'Speech',
             'description' => 'Berikut beberapa kesan dari rekan, klien, dan pembimbing selama saya mengerjakan berbagai proyek TI.',
 
-            'testimonials' => [
+            'achievements' => [
                 [
                     'image' => 'tm.jpg',
                     'name' => 'Ardi Pratama',

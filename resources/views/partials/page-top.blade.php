@@ -64,7 +64,7 @@
     <a href="{{ route('service') }}">Services</a>
     <a href="{{ route('resume') }}">Resume</a>
     <a href="{{ route('project') }}">Projects</a>
-    <a href="{{ route('testimonial') }}">Testimonials</a>
+    <a href="{{ route('achievement') }}">Achievements</a>
     <a href="{{ route('contact') }}">Contact</a>
   </div>
 </div>

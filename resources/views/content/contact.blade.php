@@ -92,7 +92,7 @@
         </div> <!-- /.container -->
         
       {{-- 🧩 Include nav dengan parameter --}}
-      @include('partials.page-nav', ['prev' => 'testimonial'])
+      @include('partials.page-nav', ['prev' => 'achievement'])
 
       </div> <!-- /.pt-tablecell -->
     </div> <!-- /.pt-table -->

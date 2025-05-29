@@ -1,5 +1,5 @@
 @extends('index')
-@section('title', 'Testimonials')
+@section('title', 'Achievements')
 @section('content')
   <div class="pt-table">
     <div class="pt-tablecell page-quotes relative">
@@ -21,10 +21,10 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="testimonials">
-              @foreach ($testimonials as $item)
+              @foreach ($achievements as $item)
                 <div class="item">
                   <figure class="thumb">
-                    <div class="tm-hex" style="background-image: url('{{ asset('images/' . $item['image']) }}');">
+                    <div class="tm-hex" style="background-image: url('{{ asset('images/achievement/' . $item['image']) }}');">
                       <div class="hexTop"></div>
                       <div class="hexBottom"></div>
                     </div>

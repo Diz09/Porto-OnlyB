@@ -46,7 +46,7 @@
       </div> <!-- /.container -->
       
       {{-- 🧩 Include nav dengan parameter --}}
-      @include('partials.page-nav', ['prev' => 'resume', 'next' => 'testimonial'])
+      @include('partials.page-nav', ['prev' => 'resume', 'next' => 'achievement'])
 
     </div> <!-- /.pt-tablecell -->
   </div> <!-- /.pt-table -->
