@@ -63,7 +63,7 @@
     <a href="{{ route('about') }}">About</a>
     <a href="{{ route('service') }}">Services</a>
     <a href="{{ route('resume') }}">Resume</a>
-    <a href="{{ route('work') }}">Works</a>
+    <a href="{{ route('project') }}">Projects</a>
     <a href="{{ route('testimonial') }}">Testimonials</a>
     <a href="{{ route('contact') }}">Contact</a>
   </div>

@@ -122,12 +122,12 @@
                   <div></div>
                   <div></div>
                 </div>
-                <a href="{{ route('work') }}" class="hex-content">
+                <a href="{{ route('project') }}" class="hex-content">
                   <span class="hex-content-inner">
                     <span class="icon">
                       <i class="tf-briefcase2"></i>
                     </span>
-                    <span class="title">Works</span>
+                    <span class="title">Projects</span>
                   </span>
                   <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                     xmlns="http://www.w3.org/2000/svg">

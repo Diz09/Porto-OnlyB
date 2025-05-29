@@ -72,7 +72,7 @@
       </div> 
       
       {{-- 🧩 Include nav dengan parameter --}}
-      @include('partials.page-nav', ['prev' => 'service', 'next' => 'work'])
+      @include('partials.page-nav', ['prev' => 'service', 'next' => 'project'])
 
     </div> <!-- /.pt-tablecell -->
   </div> <!-- /.pt-table -->

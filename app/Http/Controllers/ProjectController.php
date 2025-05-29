@@ -4,20 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class WorkController extends Controller
+class ProjectController extends Controller
 {
     public function show() 
     {
-        return view('content.work', 
+        return view('content.project', 
         [
             'title' => 'My',
-            'highlight' => 'Works',
+            'highlight' => 'Projects',
             'background' => 'Portfolio',
             'description' => 'Berikut adalah beberapa proyek yang pernah saya kerjakan, baik dalam kegiatan kampus, freelance, maupun proyek pribadi.',
 
             'filters' => ['Web', 'Mobile', 'Design', 'Laravel'],
 
-            'works' => [
+            'projects' => [
                 [
                     'image' => '1.jpg',
                     'title' => 'Sistem Inventory Barang',

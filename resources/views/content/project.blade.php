@@ -1,5 +1,5 @@
 @extends('index')
-@section('title', 'Works')
+@section('title', 'Projects')
 @section('content')
   <div class="pt-table">
     <div class="pt-tablecell page-works relative">
@@ -29,14 +29,14 @@
         </div>
 
         <div class="row isotope-gutter">
-          @foreach ($works as $work)
-            <div class="col-xs-12 col-sm-6 col-md-4 {{ implode(' ', $work['tags']) }}">
+          @foreach ($projects as $project)
+            <div class="col-xs-12 col-sm-6 col-md-4 {{ implode(' ', $project['tags']) }}">
               <figure class="works-item">
-                <img src="{{ asset('images/works/' . $work['image']) }}" alt="">
+                <img src="{{ asset('images/projects/' . $project['image']) }}" alt="">
                 <div class="overlay"></div>
                 <figcaption class="works-inner">
-                  <h4>{{ $work['title'] }}</h4>
-                  <p>{{ $work['description'] }}</p>
+                  <h4>{{ $project['title'] }}</h4>
+                  <p>{{ $project['description'] }}</p>
                 </figcaption>
               </figure>
             </div>
