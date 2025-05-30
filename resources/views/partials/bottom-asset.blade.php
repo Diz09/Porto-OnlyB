@@ -5,4 +5,7 @@
 <script src="{{ asset('plugins/isotope/isotope.pkgd.min.js') }}"></script>
 <script src="{{ asset('plugins/slick/slick.min.js')}} "></script>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/extra.js') }}"></script>

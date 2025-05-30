@@ -21,3 +21,4 @@ Route::get('resume', [ResumeController::class, 'show'])->name('resume');
 Route::get('project', [ProjectController::class, 'show'])->name('project');
 Route::get('achievement', [AchievementController::class, 'show'])->name('achievement');
 Route::get('contact', [ContactController::class, 'show'])->name('contact');
+Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');

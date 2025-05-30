@@ -32,11 +32,15 @@
           @foreach ($projects as $project)
             <div class="col-xs-12 col-sm-6 col-md-4 {{ implode(' ', $project['tags']) }}">
               <figure class="works-item">
-                <img src="{{ asset('images/projects/' . $project['image']) }}" alt="">
+                 <img src="{{ asset('images/projects/' . $project['image']) }}"
+                    alt=""
+                    @if (!$loop->first) style="height: 141.33px" @endif>
                 <div class="overlay"></div>
                 <figcaption class="works-inner">
                   <h4>{{ $project['title'] }}</h4>
-                  <p>{{ $project['description'] }}</p>
+                  <p style="white-space: normal; width:265px;">
+                    {{ $project['description'] }}
+                  </p>
                 </figcaption>
               </figure>
             </div>

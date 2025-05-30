@@ -17,7 +17,7 @@ if [ ! -d "vendor" ]; then
     composer install --no-interaction --optimize-autoloader
 fi
 
-php artisan migrate
+# php artisan migrate
 
 # Install Nodejs Deps
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash

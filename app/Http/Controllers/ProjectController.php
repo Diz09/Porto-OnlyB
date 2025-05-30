@@ -12,41 +12,41 @@ class ProjectController extends Controller
         [
             'title' => 'My',
             'highlight' => 'Projects',
-            'background' => 'Portfolio',
-            'description' => 'Berikut adalah beberapa proyek yang pernah saya kerjakan, baik dalam kegiatan kampus, freelance, maupun proyek pribadi.',
+            'background' => 'Project',
+            'description' => 'The following are projects that I have worked on during college.',
 
-            'filters' => ['Web', 'Mobile', 'Design', 'Laravel'],
+            'filters' => ['Web', 'Mobile', 'AI', 'Desktop'],
 
             'projects' => [
                 [
-                    'image' => '1.jpg',
-                    'title' => 'Sistem Inventory Barang',
-                    'description' => 'Web-based inventory system using Laravel.',
-                    'tags' => ['Web', 'Laravel']
+                    'image' => 'a1.png',
+                    'title' => 'STAYAWAKE',
+                    'description' => 'IoT integration system with AI which is useful as an early warning system for 4-wheeled drivers when they are detected as drowsy.',
+                    'tags' => ['Mobile', 'AI']
                 ],
                 [
-                    'image' => '2.jpg',
-                    'title' => 'Aplikasi Absensi Siswa',
-                    'description' => 'Aplikasi Android untuk pencatatan presensi siswa.',
-                    'tags' => ['Mobile']
+                    'image' => 'a2.png',
+                    'title' => 'EDUPRESENCE',
+                    'description' => 'Teacher attendance application.',
+                    'tags' => ['Web', 'Mobile', 'AI']
                 ],
                 [
-                    'image' => '3.jpg',
-                    'title' => 'Website Portfolio',
-                    'description' => 'Responsive portfolio dengan HTML, CSS, JS.',
-                    'tags' => ['Web', 'Design']
+                    'image' => 'a3.png',
+                    'title' => 'VIOSCAKE',
+                    'description' => 'Cake shop order transaction management application system.',
+                    'tags' => ['Mobile', 'Web']
                 ],
                 [
-                    'image' => '4.jpg',
-                    'title' => 'Redesign UI Aplikasi Akademik',
-                    'description' => 'UI/UX Design untuk aplikasi akademik kampus.',
-                    'tags' => ['Design']
+                    'image' => 'a4.png',
+                    'title' => 'SI OPET',
+                    'description' => 'Pet gramming shop transaction management application.',
+                    'tags' => ['Desktop']
                 ],
                 [
-                    'image' => '5.jpg',
-                    'title' => 'Landing Page Produk',
-                    'description' => 'Halaman pemasaran produk digital.',
-                    'tags' => ['Web']
+                    'image' => 'a5.png',
+                    'title' => 'TAILOR TS',
+                    'description' => 'Sewing business transaction recording system.',
+                    'tags' => ['Desktop']
                 ],
             ]
         ]);

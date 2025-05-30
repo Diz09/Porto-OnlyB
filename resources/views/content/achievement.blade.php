@@ -24,24 +24,25 @@
               @foreach ($achievements as $item)
                 <div class="item">
                   <figure class="thumb">
-                    <div class="tm-hex" style="background-image: url('{{ asset('images/achievement/' . $item['image']) }}');">
-                      <div class="hexTop"></div>
-                      <div class="hexBottom"></div>
-                    </div>
-                    <figcaption>
-                      <h4>{{ $item['name'] }}</h4>
-                      <span>{{ $item['position'] }}</span>
-                    </figcaption>
+                    <img 
+                      src="{{ asset('images/achievement/' . $item['image']) }}" 
+                      class="tm-rect-img  popup-img" 
+                      alt="{{ $item['name'] }}"
+                      data-full="{{ asset('images/achievement/' . $item['image']) }}">
                   </figure>
                   <div class="text">
-                    <p>{{ $item['quote'] }}</p>
+                    <figcaption style="margin-bottom: 10px">
+                      <h4>{{ $item['name'] }}</h4>
+                      <span>{{ $item['place'] }}</span>
+                    </figcaption>
+                    <p>{{ $item['desk'] }}</p>
                   </div>
                 </div>
-                @endforeach
+              @endforeach
             </div>
           </div>
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
+        </div>
+      </div>
       
       {{-- 🧩 Include nav dengan parameter --}}
       @include('partials.page-nav', ['prev' => 'project', 'next' => 'contact'])

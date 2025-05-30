@@ -1,24 +1,24 @@
 @extends('index')
 @section('title', 'Contact')
 @section('content')
-    <div class="pt-table">
-      <div class="pt-tablecell page-contact relative">
+  <div class="pt-table">
+    <div class="pt-tablecell page-contact relative">
 
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-              <div class="page-title text-center">
-                <h2>
-                  {{ $title }} 
-                  <span class="primary">{{ $highlight }}</span> 
-                  <span class="title-bg">{{ $background }}</span></h2>
-                <p>{{ $description }}</p>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+            <div class="page-title text-center">
+              <h2>
+                {{ $title }} 
+                <span class="primary">{{ $highlight }}</span> 
+                <span class="title-bg">{{ $background }}</span></h2>
+              <p>{{ $description }}</p>
             </div>
-          </div> <!-- /.row -->
+          </div>
+        </div> <!-- /.row -->
 
-          <div class="row">
-            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+        <div class="row conten-y">
+            <div class="col-xs-12 col-sm-5 col-lg-3 conten-u">
               @foreach ($contacts as $contact)
                 <div class="contact-block">
                   <div class="media">
@@ -43,57 +43,35 @@
               </ul>
 
             </div>
-            <div class="col-xs-12 col-sm-7 col-md-7 col-md-offset-1 col-lg-offset-2">
+
+            {{-- awal form --}}
+            <div class="col-md-5 conten-x">
               <div class="section-title clear">
-                <h3>Send me a meesage</h3>
+                <h3>Contact via WhatsApp <i class="bi bi-whatsapp"></i></h3>
                 <span class="bar-dark"></span>
                 <span class="bar-primary"></span>
               </div>
 
-              <form id="contact-form" class="row contact-form no-gutter" action="#" method="post">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="input-field name">
-                    <span class="input-icon" id="name"><i class="tf-profile-male"></i></span>
-                    <input type="text" class="form-control" placeholder="Enter your name" required>
-                  </div>
-                </div> <!-- ./col- -->
-                <div class="col-xs-12 col-sm-6">
-                  <div class="input-field email">
-                    <span class="input-icon" id="email"><i class="tf-envelope2"></i></span>
-                    <input type="email" class="form-control" name="email" placeholder="Your email address" required>
-                  </div>
-                </div> <!-- ./col- -->
-                <div class="col-xs-12 col-sm-12">
-                  <div class="input-field">
-                    <span class="input-icon" id="subject"><i class="tf-pricetags"></i></span>
-                    <input type="text" class="form-control" name="subject" placeholder="Enter the discussion title" required>
-                  </div>
-                </div> <!-- ./col- -->
-                <div class="col-xs-12 col-sm-12">
-                  <div class="input-field message">
-                    <span class="input-icon"><i class="tf-pencil2"></i></span>
-                    <textarea name="message" id="message" class="form-control"
-                      placeholder="Write your message" required></textarea>
-                  </div>
-                </div> <!-- ./col- -->
-                <div class="col-xs-12 col-sm-12">
-                  <div class="input-field">
-                    <span class="btn-border">
-                      <button type="submit" class="btn btn-primary btn-custom-border text-uppercase">Send Message
-                        now</button>
-                    </span>
-                  </div>
-                  <div class="msg-success">Your Message was sent successfully</div>
-                  <div class="msg-failed">Something went wrong, please try again later</div>
-                </div> <!-- ./col- -->
-              </form> <!-- /.row -->
-            </div> <!-- /.col- -->
-          </div> <!-- /.row -->
-        </div> <!-- /.container -->
-        
-      {{-- 🧩 Include nav dengan parameter --}}
-      @include('partials.page-nav', ['prev' => 'achievement'])
+              <div class="text-center">
+                {{-- <p>Scan QR code di bawah atau klik tombol untuk langsung terhubung dengan saya via WhatsApp.</p> --}}
+                <div class="wa-link">
+                  <img src="{{ $qrCodeUrl }}" alt="WhatsApp QR Code">
 
-      </div> <!-- /.pt-tablecell -->
-    </div> <!-- /.pt-table -->
+                  <a href="{{ $waLink }}" target="_blank" class="btn btn-success btn-lg">
+                    <i class="fa fa-whatsapp"></i> Hubungi via WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+      
+    {{-- 🧩 Include nav dengan parameter --}}
+    @include('partials.page-nav', ['prev' => 'achievement'])
+
+    </div> <!-- /.pt-tablecell -->
+  </div> <!-- /.pt-table -->
 @endsection

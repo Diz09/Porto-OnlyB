@@ -15,6 +15,7 @@
 
   <!-- Essential Stylesheets -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="{{ asset('plugins/bootstrap/bootstrap.min.css')}} ">
   <link rel="stylesheet" href="{{ asset('plugins/animate.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/slick/slick.css') }}">
