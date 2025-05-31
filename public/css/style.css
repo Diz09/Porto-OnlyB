@@ -734,6 +734,7 @@ label {
   top: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
+  padding: 0 10px;
 }
 .service-hex .icon {
   font-size: 30px;
@@ -746,10 +747,10 @@ label {
 }
 .service-hex p {
   font-size: 14px;
-  height: 0;
+  max-height: 0;
   line-height: 24px;
   overflow: hidden;
-  transition: all 0.4s ease 0s;
+  transition: max-height 0.4s ease;
 }
 .service-hex:hover {
   z-index: 2;
@@ -765,6 +766,7 @@ label {
 }
 .service-hex:hover p {
   height: 72px;
+  max-height: 200px;
 }
 
 .testimonials .item {

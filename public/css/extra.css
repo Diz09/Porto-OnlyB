@@ -1,3 +1,21 @@
+.masked-text {
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    background-image: url('/images/banner.jpg');
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto 60%;
+    /* -webkit-background-clip: text; */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-top: -60px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
 .hx {
     display: flex;
     flex-wrap: wrap;
@@ -43,8 +61,11 @@
 }
 
 .conten-p {
-  max-width: 60px;
+  max-width: 160px; /* atau lebih */
   height: auto;
+  word-wrap: break-word;
+  text-align: center;
+  padding: 0 10px;
 }
 
 .tm-rect-img {

@@ -8,8 +8,9 @@
         <div class="row">
           <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
             <div class="page-title home text-center">
-              <img src="images/phantom.png" alt="">
-              <p>A product designer from England, who focuses on interactive design &amp; A freelance designer focusing on typography &amp; clean interfaces. Also works in Google.</p>
+              {{-- <img src="images/phantom.png" alt=""> --}}
+              <div class="masked-text">This Is<br>My Portofolio</div>
+              <p>I build web applications through continuous project-based learning &amp; each project refining my skills in writing clean code and delivering functional web experience</p>
             </div>
 
             <div class="hexagon-menu clear">
