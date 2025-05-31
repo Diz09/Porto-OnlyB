@@ -68,6 +68,15 @@
   padding: 0 10px;
 }
 
+.conten-r {
+  position: absolute;
+  bottom: -140px;
+  left: 20px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 .tm-rect-img {
   display: block;
   width: auto;

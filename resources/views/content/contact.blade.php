@@ -69,9 +69,9 @@
         </div> <!-- /.row -->
       </div> <!-- /.container -->
       
-    {{-- 🧩 Include nav dengan parameter --}}
-    @include('partials.page-nav', ['prev' => 'achievement'])
-
+    <div class="conten-r">
+      @include('partials.page-nav', ['prev' => 'achievement'])
+    </div>
     </div> <!-- /.pt-tablecell -->
   </div> <!-- /.pt-table -->
 @endsection
