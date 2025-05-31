@@ -30,7 +30,7 @@
                     <i class="et-line {{ $service['icon'] }}"></i>
                   </div>
                   <h4>{!! nl2br(e($service['title'])) !!}</h4>
-                  <p>{{ $service['description'] }}</p>
+                  <p class="conten-p">{{ $service['description'] }}</p>
                 </div>
               </div>
             @endforeach

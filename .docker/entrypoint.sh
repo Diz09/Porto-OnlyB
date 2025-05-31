@@ -27,8 +27,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # source ~/.bashrc
 
-nvm install --lts
-npm install && npm run build
+# nvm install --lts
+# npm install
+npm run build
 
 
 php artisan storage:link

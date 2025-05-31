@@ -39,7 +39,7 @@
             <div class="section-title clear">
               <h3>Skills</h3>
             </div>
-            <div class="skill-wrapper">
+            <div class="skill-wrapper col-pb-md-5">
               @foreach($skills as $skill)
               <div class="progress clear">
                 <div class="skill-name">{{ $skill['name'] }}</div>

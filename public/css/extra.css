@@ -42,6 +42,11 @@
   margin-right: 75px;
 }
 
+.conten-p {
+  max-width: 60px;
+  height: auto;
+}
+
 .tm-rect-img {
   display: block;
   width: auto;

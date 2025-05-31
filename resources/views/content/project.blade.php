@@ -30,7 +30,7 @@
 
         <div class="row isotope-gutter">
           @foreach ($projects as $project)
-            <div class="col-xs-12 col-sm-6 col-md-4 {{ implode(' ', $project['tags']) }}">
+            <div class="col-xs-12 col-sm-6 col-md-4 {{ implode(' ', $project->tags->pluck('name')->toArray()) }}">
               <figure class="works-item">
                  <img src="{{ asset('images/projects/' . $project['image']) }}"
                     alt=""
